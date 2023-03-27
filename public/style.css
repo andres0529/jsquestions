@@ -153,3 +153,9 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #b31d13;
 }
+p.alert-info {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin-top: 20px;
+}

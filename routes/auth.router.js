@@ -19,13 +19,15 @@ router.post("/register", async (req, res) => {
 // *****To Load the view Login
 router.get("/login", (req, res, next) => {
   let message = req.query.message;
+  if(message==='404'){
+    message= "User or password invalid"
+  }
   res.render("auth/login", { message: message, title: "Login" });
 });
 
-router.post(
-  "/login",
+router.post("/login",
   passport.authenticate("local", {
-    failureRedirect: "login",
+    failureRedirect: "login/?message=404",
   }),
   (req, res) => {
     res.redirect("/myaccount");
