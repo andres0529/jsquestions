@@ -44,7 +44,7 @@ body {
   margin-left: 15px;
 }
 
-#navbarNav > ul > li{
+#navbarNav > ul > li {
   display: flex;
   align-items: center;
 }
@@ -54,14 +54,13 @@ body {
   font-weight: 400;
   margin-left: 15px;
 }
-.navbar-nav .nav-link:hover, .navbar .btn:hover {
+.navbar-nav .nav-link:hover,
+.navbar .btn:hover {
   color: #fff;
   border-bottom: red solid 0.5px;
   background-color: transparent;
   border-radius: 0;
 }
-
-
 
 .navbar-toggler-icon {
   border: none;
@@ -77,6 +76,23 @@ body {
   width: 14%;
 }
 
+.navbar div.img {
+  background-image: url("./images/logoblack.png");
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+}
+/* .navbar div.img:hover{
+  background-image: url("./images/logo.png");
+} */
+/* #logotext:hover ~ div.navbar div.img {
+  background-image: url("./images/logo.png");
+
+} */
+#logoContainer:hover > div.img {
+  background-image: url("./images/logo.png");
+}
+
 /* HOME STYLE */
 #home img {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
@@ -90,12 +106,12 @@ body {
   font-size: 20px;
   font-weight: 500;
 }
-#home thead{
+#home thead {
   background-color: #4b4b4b;
   color: #fff;
 }
 
-#home table{
+#home table {
   border: 0px !important;
 }
 
