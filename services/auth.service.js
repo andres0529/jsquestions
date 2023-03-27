@@ -7,7 +7,7 @@ const helper = require("./../utils/helpers");
 const authService = {
   register: async (params, res) => {
     const { email, password, confirmPassword, name } = params;
-    const userDB = await user.findOne({ email});
+    const userDB = await user.findOne({ email });
     let message = "";
     if (password !== confirmPassword) {
       message = "Passwords do not match";
@@ -22,29 +22,13 @@ const authService = {
         score: 0,
         questions: [],
       };
-      console.log(newRecord)
+      console.log(newRecord);
       const newUser = await user.create(newRecord);
     }
-
     if (!message) {
       return 200;
     }
     return message;
-  },
-
-  login: async (req, res) => {
-    const { email, password } = req.body;
-    if (!email || !password) return res.status(400);
-    const userDB = await user.findOne({ email });
-    if (!userDB) return res.send(401);
-    const isValid = helper.comparePassword(password, userDB.password);
-    if (isValid) {
-      req.session.user = userDB;
-      console.log(userDB);
-      return 200;
-    } else {
-      return 401;
-    }
   },
 };
 

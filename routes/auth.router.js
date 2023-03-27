@@ -5,7 +5,6 @@ const router = express.Router();
 const passport = require("passport");
 const user = require("./../db/models/userInfo.model");
 
-
 // *****To Load the view Register
 router.get("/register", (req, res) => {
   let message = req.query.message;
@@ -29,16 +28,21 @@ router.get("/login", (req, res, next) => {
   res.render("auth/login", { message: message, title: "Login" });
 });
 
-// *****To Log in into the session
-router.post("/login", passport.authenticate("local"), (req, res) => {
-  res.redirect('/myaccount');
-});
+router.post("/login",passport.authenticate("local", {
+    failureRedirect: "login",
+  }),
+  (req, res) => {
+    res.redirect("/myaccount");
+  }
+);
 
 // ****To log out
-router.get('/logout', function(req, res, next){
-  req.logout(function(err) {
-    if (err) { return next(err); }
-    res.redirect('/');
+router.get("/logout", function (req, res, next) {
+  req.logout(function (err) {
+    if (err) {
+      return next(err);
+    }
+    res.redirect("/");
   });
 });
 module.exports = router;

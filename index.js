@@ -32,9 +32,6 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-// passport.use(user.createStrategy());
-// passport.use(new LocalStrategy(user.authenticate()));
-
 // read / write session vars
 passport.serializeUser(user.serializeUser());
 passport.deserializeUser(user.deserializeUser());
