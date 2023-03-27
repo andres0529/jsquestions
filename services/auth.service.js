@@ -22,13 +22,12 @@ const authService = {
         score: 0,
         questions: [],
       };
-      console.log(newRecord);
-      const newUser = await user.create(newRecord);
+      await user.create(newRecord);
+      res.redirect("/auth/login/?message=User Created");
+      return;
     }
-    if (!message) {
-      return 200;
-    }
-    return message;
+    res.redirect("/auth/register/?message=" + message);
+    return;
   },
 };
 

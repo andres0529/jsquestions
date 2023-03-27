@@ -14,12 +14,7 @@ router.get("/register", (req, res) => {
 // *****To create the new user into the DB
 router.post("/register", async (req, res) => {
   // call the service who is in charge to manage the request
-  let message = await authService.register(req.body, res);
-  if (message === 200) {
-    res.redirect("/auth/login/?message=User Created");
-  } else {
-    res.redirect("/auth/register/?message=" + message);
-  }
+  await authService.register(req.body, res);
 });
 
 // *****To Load the view Login
@@ -28,7 +23,9 @@ router.get("/login", (req, res, next) => {
   res.render("auth/login", { message: message, title: "Login" });
 });
 
-router.post("/login",passport.authenticate("local", {
+router.post(
+  "/login",
+  passport.authenticate("local", {
     failureRedirect: "login",
   }),
   (req, res) => {
