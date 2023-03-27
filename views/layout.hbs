@@ -49,15 +49,27 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/auth/register">Register</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/auth/login">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn" href="#">Play Now</a>
-            </li>
+
+            {{#if user}}
+              <li class="nav-item">
+                <a class="nav-link" href="/myaccount">{{user.fullName}}</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn" href="/game">Play Now</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/auth/logout">Logout</a>
+              </li>
+            {{else}}
+              <li class="nav-item">
+                <a class="nav-link" href="/auth/register">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/auth/login">Login</a>
+              </li>
+
+            {{/if}}
+
           </ul>
         </div>
       </div>

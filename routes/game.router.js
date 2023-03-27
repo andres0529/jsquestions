@@ -2,11 +2,18 @@ const express = require("express");
 const router = express.Router();
 
 
+router.use((req, res, next) => {
+  if (req.user) next();
+  else res.send(401);
+});
+
 router.get("/", (req, res) => {
-  res.render('game',{
-    title: 'Game',
-    user: req.user
-  })
+  let params = {
+    title: "Game",
+    // result: result,
+    user: req.user,
+  };
+  res.render("game", params);
 });
 
 module.exports = router;

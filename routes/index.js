@@ -7,7 +7,7 @@ const routerApi = (app) => {
   app.use("/", homeRouter);
   app.use("/auth", authRouter);
   app.use("/game", gameRouter);
-  app.use("/myAccount", myAccountRouter);
+  app.use("/myaccount", myAccountRouter);
 };
 
 module.exports = routerApi;

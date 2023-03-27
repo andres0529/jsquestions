@@ -8,6 +8,7 @@ const userSchema = new schema(
   {
     oauthProvider: String,
     oauthId: String,
+    username: String,
     password: String,
     fullName: String,
     email: String,

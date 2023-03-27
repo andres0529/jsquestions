@@ -4,11 +4,14 @@ const homeService = require("./../services/home.service.js");
 
 router.get("/", async (req, res) => {
   let result = await homeService();
-  
-  res.render("index", {
+
+  let params = {
     title: "Home",
     result: result,
-  });
+    user: req.user,
+  };
+
+  res.render("index", params);
 });
 
 module.exports = router;
