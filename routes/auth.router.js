@@ -3,7 +3,6 @@ const express = require("express");
 const authService = require("./../services/auth.service");
 const router = express.Router();
 const passport = require("passport");
-const user = require("./../db/models/userInfo.model");
 
 // *****To Load the view Register
 router.get("/register", (req, res) => {

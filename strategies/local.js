@@ -37,6 +37,10 @@ passport.use(
         if (!isValid) {
           return done(null, false);
         }
+        let lastLog = new Date().toLocaleDateString();
+        await user.findByIdAndUpdate(userDB.id, {
+          lastLoggin: lastLog,
+        });
 
         done(null, userDB);
       } catch (error) {
