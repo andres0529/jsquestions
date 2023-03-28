@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="cards">
   <div class="row justify-content-center align-items-center h-25">
     <div class="jumbotron text-center">
       <h1 class="display-4">{{user.fullName}}</h1>
@@ -20,7 +20,9 @@
 </div>
 <div class="toolbar">
   <div class="container">
-    <span>Delete my account</span>
-    <img src="./images/delete.png" alt="Delte account" />
+    <form method="post">
+      
+      <input type="submit" value="Delete my account" />
+    </form>
   </div>
 </div>

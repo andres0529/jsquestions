@@ -3,7 +3,6 @@
         "dateCollected":"02-03-2022",
         "town":"Midland",
         "localMunicipality":"Midland",
-        "housingType":"Detached",
         "stratifiedArea":"Unclear",
         "streetNo":"",
         "streetName":"Springdale Dr",

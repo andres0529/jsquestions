@@ -13,7 +13,7 @@ passport.deserializeUser(async (id, done) => {
     if (!result) throw new Error("User not found");
     done(null, result);
   } catch (error) {
-    done(error, null);
+    done(null, null);
   }
 });
 
@@ -32,19 +32,13 @@ passport.use(
         if (!userDB) {
           throw new Error("User not found");
         }
-
         const isValid = helper.comparePassword(password, userDB.password);
         if (!isValid) {
           return done(null, false);
         }
-        let lastLog = new Date().toLocaleDateString();
-        await user.findByIdAndUpdate(userDB.id, {
-          lastLoggin: lastLog,
-        });
-
         done(null, userDB);
       } catch (error) {
-        done(error, null);
+        return done(error, null);
       }
     }
   )

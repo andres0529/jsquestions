@@ -24,17 +24,16 @@ router.get("/login", (req, res, next) => {
     message = "User or password invalid";
   }
   res.render("auth/login", { message: message, title: "Login" });
+  // res.render("auth/login", { message: message, title: "Login" });
 });
 
-router.post(
-  "/login",
-  passport.authenticate("local", {
-    failureRedirect: "login/?message=404",
-  }),
-  (req, res) => {
-    res.redirect("/myaccount");
-  }
-);
+router.post('/login', passport.authenticate('local', {
+  failureRedirect: '/login?message=Invalid username or password',
+  failureFlash: true
+}), function(req, res) {
+  res.redirect('/myaccount');
+});
+
 
 // ****To log out
 router.get("/logout", async function (req, res, next) {
