@@ -159,3 +159,18 @@ p.alert-info {
   height: 30px;
   margin-top: 20px;
 }
+
+/* My Account */
+
+/**** Style for Toolbar ****/
+.toolbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #333;
+  text-align: end;
+  color:#fff;
+}

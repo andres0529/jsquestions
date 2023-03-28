@@ -3,6 +3,7 @@ const express = require("express");
 const authService = require("./../services/auth.service");
 const router = express.Router();
 const passport = require("passport");
+const user = require("./../db/models/userInfo.model");
 
 // *****To Load the view Register
 router.get("/register", (req, res) => {
@@ -19,13 +20,14 @@ router.post("/register", async (req, res) => {
 // *****To Load the view Login
 router.get("/login", (req, res, next) => {
   let message = req.query.message;
-  if(message==='404'){
-    message= "User or password invalid"
+  if (message === "404") {
+    message = "User or password invalid";
   }
   res.render("auth/login", { message: message, title: "Login" });
 });
 
-router.post("/login",
+router.post(
+  "/login",
   passport.authenticate("local", {
     failureRedirect: "login/?message=404",
   }),
@@ -35,7 +37,13 @@ router.post("/login",
 );
 
 // ****To log out
-router.get("/logout", function (req, res, next) {
+router.get("/logout", async function (req, res, next) {
+  // Updating the last log in date
+  let lastLog = new Date().toLocaleDateString();
+  await user.findByIdAndUpdate(req.user.id, {
+    lastLoggin: lastLog,
+  });
+
   req.logout(function (err) {
     if (err) {
       return next(err);
