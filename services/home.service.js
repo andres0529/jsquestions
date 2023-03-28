@@ -13,18 +13,10 @@ const homeService = {
   deleteAccount: async (id) => {
     try {
       await user.findByIdAndDelete({ _id: id });
-      console.log('eliminado')
+      console.log("eliminado");
     } catch (error) {
       console.log(error);
     }
   },
 };
-
-// const homeService = async () => {
-//   let topTen = await userInfoSchema.find().sort({ score: -1 }).limit(10);
-//   // Increasing in 1 all the positions into the array
-//   topTen.forEach((user, i) => (user.pos = i + 1));
-//   return topTen;
-// };
-
 module.exports = homeService;

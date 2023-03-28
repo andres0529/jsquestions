@@ -27,7 +27,6 @@ passport.use(
         if (!email || !password) {
           throw new Error("Bad Request. Missing credentials");
         }
-
         const userDB = await user.findOne({ email });
         if (!userDB) {
           throw new Error("User not found");
@@ -38,7 +37,7 @@ passport.use(
         }
         done(null, userDB);
       } catch (error) {
-        return done(error, null);
+        return done(null, null);
       }
     }
   )
