@@ -15,13 +15,19 @@ const gameService = {
     }
   },
 
-  evaluateAnswer: async (rightanswer, req, scorequestion) => {
+  evaluateAnswer: async (rightanswer, req, scorequestion, questionid) => {
     let selected = parseInt(req.query.option);
     try {
+      // if the answer is right
       if (rightanswer === selected) {
         await user.findByIdAndUpdate(
           req.user.id,
           { $inc: { score: scorequestion } },
+          { new: true }
+        );
+        await user.findByIdAndUpdate(
+          req.user.id,
+          { $push: { questions: questionid } },
           { new: true }
         );
       }

@@ -28,6 +28,7 @@ router.get("/", async (req, res) => {
   // save the right answer
   req.session.questionanswer = question.answer;
   req.session.questionscore = question.score;
+  req.session.questionid = question.id;
 
   res.render("game", params);
 });
@@ -37,9 +38,10 @@ router.get("/increment", async (req, res) => {
   req.session.numberquestion++;
 
   let rightanswer = req.session.questionanswer;
-  let scorequestion = req.session.questionscore;
+  let questionscore = req.session.questionscore;
+  let questionid = req.session.questionid;
 
-  await gameService.evaluateAnswer(rightanswer, req, scorequestion);
+  await gameService.evaluateAnswer(rightanswer, req, questionscore,questionid);
   res.redirect("/game");
 });
 
