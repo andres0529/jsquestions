@@ -35,7 +35,7 @@ router.post(
   function (req, res) {
     // Variables to save data of the current session
     req.session.score = 0;
-    req.session.questionsDone = 0;
+    req.session.numberquestion = 1;
 
     res.redirect("/myaccount");
   }

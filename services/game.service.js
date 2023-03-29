@@ -1,22 +1,17 @@
-const express = require("express");
-const router = express.Router();
-const homeService = require("./../services/home.service.js");
+/* eslint-disable no-unused-vars */
+const connection = require("./../db/config.js");
+let question = require("./../db/models/question.model");
 
-router.get("/", async (req, res) => {
-  let result = await homeService.getTopTen();
-
-  let params = {
-    title: "Home",
-    result: result,
-    user: req.user || "",
-  };
-
-  res.render("index", params);
-});
-
-router.post("/", async (req, res) => {
-  await homeService.deleteAccount(req.user.id);
-  res.redirect("/index");
-});
-
-module.exports = router;
+const gameService = {
+  getQuestion: async () => {
+    try {
+      let questionslist = await question.find();
+      // grabbing a random question of the list that I got
+      let randomNumber = Math.floor(Math.random() * questionslist.length);
+      return questionslist[randomNumber];
+    } catch (error) {
+      return error;
+    }
+  },
+};
+module.exports = gameService;

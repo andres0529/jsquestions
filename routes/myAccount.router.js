@@ -8,6 +8,8 @@ router.use((req, res, next) => {
 });
 
 router.get("/", (req, res) => {
+  // Reset the question number of game
+  req.session.numberquestion = 1;
   res.render("myaccount", { user: req.user });
 });
 
