@@ -1,17 +1,16 @@
 <div class="container" id="game">
-  <div>
+  <div >
     <h5>Question {{questionNumber}}/20</h5>
-
   </div>
-  <h2 id="question">{{question}}</h2>
-  <form id="options-form" action="/game/increment" method="get">
+  <hr>
+  <h3 id="question" class="mt-3">{{question}}</h3>
+  <form id="options-form" action="/game/increment" method="get" >
     <hr />
     <ul>
       {{#each options}}
-
         <li>
           <label>
-            <input type="radio" name="option" value="{{@index}}" />
+            <input type="radio" name="option" value="{{@index}}" id="andres" />
             {{this}}
           </label>
         </li>

@@ -24,12 +24,22 @@ router.get("/", async (req, res) => {
     user: req.user,
     questionNumber: req.session.numberquestion,
   };
+
+  // save the right answer
+  req.session.questionanswer = question.answer;
+  req.session.questionscore = question.score;
+
   res.render("game", params);
 });
 
 // INCREASE QUESTIONS
-router.get("/increment", (req, res) => {
+router.get("/increment", async (req, res) => {
   req.session.numberquestion++;
+
+  let rightanswer = req.session.questionanswer;
+  let scorequestion = req.session.questionscore;
+
+  await gameService.evaluateAnswer(rightanswer, req, scorequestion);
   res.redirect("/game");
 });
 

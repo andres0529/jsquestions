@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 const connection = require("./../db/config.js");
 let question = require("./../db/models/question.model");
+let user = require("./../db/models/userInfo.model");
 
 const gameService = {
   getQuestion: async () => {
@@ -9,6 +10,21 @@ const gameService = {
       // grabbing a random question of the list that I got
       let randomNumber = Math.floor(Math.random() * questionslist.length);
       return questionslist[randomNumber];
+    } catch (error) {
+      return error;
+    }
+  },
+
+  evaluateAnswer: async (rightanswer, req, scorequestion) => {
+    let selected = parseInt(req.query.option);
+    try {
+      if (rightanswer === selected) {
+        await user.findByIdAndUpdate(
+          req.user.id,
+          { $inc: { score: scorequestion } },
+          { new: true }
+        );
+      }
     } catch (error) {
       return error;
     }
