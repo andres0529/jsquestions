@@ -183,6 +183,62 @@ form#register {
   cursor: pointer;
   animation: horizontal-shaking 0.5s infinite;
 }
+
+/* GAME style */
+.container#game {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+#game h2 {
+  margin-bottom: 20px;
+}
+
+#game ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+  text-align: initial;
+}
+
+#game li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+#game ul li input {
+  margin-right: 10px;
+}
+
+#game ul li label:hover {
+  animation: horizontal-shaking 0.5s infinite;
+  color: #fff;
+  cursor: pointer;
+}
+
+#game button {
+  background-color: #4b4b4b;
+  color: #fff;
+  height: 50px;
+  width: 150px;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 4px;
+  font-family: monospace;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  transition: box-shadow 0.2s ease;
+}
+
+#game button:hover{
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: box-shadow 0.2s ease;
+}
+
 @keyframes horizontal-shaking {
   0% {
     transform: translateX(0);

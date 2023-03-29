@@ -3,7 +3,10 @@
     <div class="jumbotron text-center">
       <h1 class="display-4">{{user.fullName}}</h1>
       <hr class="my-2" />
-      <p class="lead">Last Login: {{user.lastLoggin}}</p>
+     
+        <p class="lead">Last Login: {{user.lastLoggin}}</p>
+              <p>Score: {{user.score}}</p>
+     
     </div>
     <div class="">
       <div class="card" style="width: 18rem;">
@@ -21,7 +24,7 @@
 <div class="toolbar">
   <div class="container">
     <form method="post">
-      
+
       <input type="submit" value="Delete my account" />
     </form>
   </div>
