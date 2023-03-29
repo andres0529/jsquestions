@@ -13,7 +13,6 @@ const homeService = {
   deleteAccount: async (id) => {
     try {
       await user.findByIdAndDelete({ _id: id });
-      console.log("eliminado");
     } catch (error) {
       console.log(error);
     }
