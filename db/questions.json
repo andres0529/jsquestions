@@ -1,0 +1,307 @@
+[
+  {
+    "question": "Which of the following is NOT a valid JavaScript data type?",
+    "options": ["number", "string", "boolean", "struct"],
+    "score": 25,
+    "answer": 3
+  },
+  {
+    "question": "What does the 'typeof' operator return?",
+    "options": [
+      "The data type of the operand",
+      "The value of the operand",
+      "The length of the operand",
+      "The index of the operand"
+    ],
+    "score": 30,
+    "answer": 0
+  },
+  {
+    "question": "What is the difference between '==' and '===' operators?",
+    "options": [
+      "'==' compares value and type, while '===' compares only value",
+      "'==' compares only value, while '===' compares value and type",
+      "'==' and '===' are equivalent",
+      "There is no such thing as the '===' operator"
+    ],
+    "score": 35,
+    "answer": 1
+  },
+  {
+    "question": "What does the 'this' keyword refer to in JavaScript?",
+    "options": [
+      "The function itself",
+      "The parent object",
+      "The global object",
+      "The current object context"
+    ],
+    "score": 40,
+    "answer": 3
+  },
+  {
+    "question": "What is the difference between 'var', 'let' and 'const'?",
+    "options": [
+      "'var' is used for global variables, 'let' and 'const' are used for local variables",
+      "'var' and 'let' are used for mutable variables, 'const' is used for immutable variables",
+      "'var' is used for immutable variables, 'let' and 'const' are used for mutable variables",
+      "'var', 'let' and 'const' are equivalent"
+    ],
+    "score": 45,
+    "answer": 1
+  },
+  {
+    "question": "What is the difference between 'null' and 'undefined'?",
+    "options": [
+      "'null' means the variable has no value, while 'undefined' means the variable has not been initialized",
+      "'null' and 'undefined' are equivalent",
+      "'undefined' means the variable has no value, while 'null' means the variable has not been initialized",
+      "'null' and 'undefined' cannot be compared"
+    ],
+    "score": 50,
+    "answer": 0
+  },
+  {
+    "question": "What is the result of the following expression: true && false || true?",
+    "options": ["true", "false", "undefined", "null"],
+    "score": 55,
+    "answer": 0
+  },
+  {
+    "question": "What is the result of the following expression: '1' + 2 + 3?",
+    "options": ["'123'", "6", "NaN", "Error"],
+    "score": 60,
+    "answer": 0
+  },
+  {
+    "question": "What is the result of the following expression: [] + {}?",
+    "options": ["'[object Object]'", "{}", "undefined", "Error"],
+    "score": 25,
+    "answer": 0
+  },
+  {
+    "question": "What is the result of the following expression: 1 + -'1' + '2'?",
+    "options": ["'02'", "2", "0", "NaN"],
+    "score": 30,
+    "answer": 0
+  },
+  {
+    "question": "Which method is used to add new elements to an array in JavaScript?",
+    "options": [".push()", ".pop()", ".shift()", ".unshift()"],
+    "score": 35,
+    "answer": 0
+  },
+  {
+    "question": "What is the difference between 'splice()' and 'slice()' methods in JavaScript?",
+    "options": [
+      "'splice()' adds or removes elements from an array, while 'slice()' creates a new array with a subset of elements",
+      "'splice()' creates a new array with a subset of elements, while 'slice()' adds or removes elements from an array",
+      "'splice()' and 'slice()' are equivalent",
+      "There is no such thing as 'splice()' or 'slice()' methods in JavaScript"
+    ],
+    "score": 40,
+    "answer": 0
+  },
+  {
+    "question": "What is the purpose of the 'map()' method in JavaScript?",
+    "options": [
+      "To create a new array with the results of calling a function for every array element",
+      "To add new elements to an array",
+      "To remove elements from an array",
+      "To check if an array includes a certain value"
+    ],
+    "score": 45,
+    "answer": 0
+  },
+  {
+    "question": "What is the purpose of the 'reduce()' method in JavaScript?",
+    "options": [
+      "To reduce an array to a single value by calling a function for every array element",
+      "To add new elements to an array",
+      "To remove elements from an array",
+      "To check if an array includes a certain value"
+    ],
+    "score": 50,
+    "answer": 0
+  },
+  {
+    "question": "What is the difference between 'find()' and 'filter()' methods in JavaScript?",
+    "options": [
+      "'find()' returns the first element that satisfies a condition, while 'filter()' returns an array of all elements that satisfy a condition",
+      "'filter()' returns the first element that satisfies a condition, while 'find()' returns an array of all elements that satisfy a condition",
+      "'find()' and 'filter()' are equivalent",
+      "There is no such thing as 'find()' or 'filter()' methods in JavaScript"
+    ],
+    "score": 55,
+    "answer": 0
+  },
+  {
+    "question": "What is the purpose of the 'setTimeout()' function in JavaScript?",
+    "options": [
+      "To execute a function after a specified time interval",
+      "To execute a function repeatedly at a specified time interval",
+      "To stop the execution of a function",
+      "To check if a variable is defined"
+    ],
+    "score": 60,
+    "answer": 0
+  },
+  {
+    "question": "What is the purpose of the 'setInterval()' function in JavaScript?",
+    "options": [
+      "To execute a function repeatedly at a specified time interval",
+      "To execute a function after a specified time interval",
+      "To stop the execution of a function",
+      "To check if a variable is defined"
+    ],
+    "score": 25,
+    "answer": 0
+  },
+  {
+    "question": "Which of the following is a valid way to define a function in JavaScript?",
+    "options": [
+      "function myFunction() {}",
+      "var myFunction = function() {}",
+      "myFunction = function() {}",
+      "All of the above"
+    ],
+    "score": 30,
+    "answer": 3
+  },
+  {
+    "question": "Which of the following is not a JavaScript framework?",
+    "options": ["React", "Angular", "Vue", "Node"],
+    "score": 25,
+    "answer": 3
+  },
+  {
+    "question": "What does JSON stand for?",
+    "options": [
+      "JavaScript Object Notation",
+      "JavaScript Object Naming",
+      "Java Syntax Object Naming",
+      "Java Syntax Object Notation"
+    ],
+    "score": 25,
+    "answer": 0
+  },
+  {
+    "question": "What is the difference between null and undefined in JavaScript?",
+    "options": [
+      "They are the same",
+      "null means the absence of a value, while undefined means a variable has been declared but has not been assigned a value",
+      "undefined means the absence of a value, while null means a variable has been declared but has not been assigned a value",
+      "They are both values assigned to variables when they are first declared"
+    ],
+    "score": 30,
+    "answer": 1
+  },
+  {
+    "question": "What is the result of the following code? \nconsole.log(typeof(null));",
+    "options": ["undefined", "object", "null", "number"],
+    "score": 30,
+    "answer": 1
+  },
+  {
+    "question": "What is the result of the following code? \nconsole.log('5' - 3);",
+    "options": ["2", "3", "4", "5"],
+    "score": 35,
+    "answer": 2
+  },
+  {
+    "question": "What is the output of the following code? \nfor (var i = 0; i < 5; i++) {\n  setTimeout(function() {\n    console.log(i);\n  }, 1000);\n}",
+    "options": [
+      "0 1 2 3 4",
+      "1 2 3 4 5",
+      "5 5 5 5 5",
+      "undefined undefined undefined undefined undefined"
+    ],
+    "score": 35,
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is not a higher-order function?",
+    "options": ["map()", "filter()", "reduce()", "split()"],
+    "score": 40,
+    "answer": 3
+  },
+  {
+    "question": "What is the result of the following code? \nconsole.log(5 < 6 < 7);",
+    "options": ["true", "false", "undefined", "null"],
+    "score": 40,
+    "answer": 0
+  },
+  {
+    "question": "Which of the following is not a valid way to declare a function in JavaScript?",
+    "options": [
+      "function foo() {}",
+      "var foo = function() {}",
+      "() => {}",
+      "new Function('return 1')"
+    ],
+    "score": 45,
+    "answer": 3
+  },
+  {
+    "question": "What is the result of the following code? \nconsole.log(['a', 'b', 'c'].indexOf('d'));",
+    "options": ["0", "1", "-1", "null"],
+    "score": 45,
+    "answer": 2
+  },
+  {
+    "question": "What is the output of this code?\nconsole.log(typeof NaN);",
+    "options": ["string", "number", "undefined", "NaN"],
+    "score": 30,
+    "answer": 1
+  },
+  {
+    "question": "What is the output of this code?\nlet arr = [1, 2, 3];\narr.length = 0;\nconsole.log(arr);",
+    "options": [
+      "[0, 0, 0]",
+      "[]",
+      "[undefined, undefined, undefined]",
+      "[null, null, null]"
+    ],
+    "score": 30,
+    "answer": 1
+  },
+  {
+    "question": "What is the output of this code?\nlet a = 10;\nlet b = 20;\nconsole.log(`The sum of ${a} and ${b} is ${a + b}`);",
+    "options": [
+      "The sum of 10 and 20 is 30",
+      "The sum of a and b is 30",
+      "The sum of ${a} and ${b} is ${a + b}",
+      "SyntaxError"
+    ],
+    "score": 30,
+    "answer": 0
+  },
+  {
+    "question": "What is the output of this code?\nconsole.log([] + []);",
+    "options": ["[]", "0", "undefined", "''"],
+    "score": 35,
+    "answer": 3
+  },
+  {
+    "question": "What is the output of this code?\nconsole.log(1 + '2' + 3 + '4');",
+    "options": ["1234", "10", "10203", "NaN"],
+    "score": 40,
+    "answer": 0
+  },
+  {
+    "question": "What is the output of this code?\nlet x = 5;\nconsole.log(x++ + ++x + x++);",
+    "options": ["18", "16", "15", "14"],
+    "score": 45,
+    "answer": 1
+  },
+  {
+    "question": "What is the output of this code?\nlet arr = ['a', 'b', 'c'];\nfor (let i in arr) {\n  console.log(i);\n}",
+    "options": [
+      "0, 1, 2",
+      "'a', 'b', 'c'",
+      "'a', 'b', 'c', '0', '1', '2'",
+      "'0', '1', '2'"
+    ],
+    "score": 45,
+    "answer": 0
+  }
+]
