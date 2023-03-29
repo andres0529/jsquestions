@@ -1,5 +1,8 @@
 <div class="container" id="game">
-  <div> <h5 class="text-right">Timer: 10:00</h5></div>
+  <div> <h5 class="text-right">Timer: 10:00</h5>
+  <h5>Question /20</h5>
+  
+  </div>
   <h2 id="question">What is the correct way to write a function in JavaScript?</h2>
   <form id="options-form">
     <hr>
@@ -33,3 +36,7 @@
     <button type="submit">Next <img src="./images/next.png" alt=""></button>
   </form>
 </div>
+<h5 class="text-center">{{count}}</h5>
+  <form action="/game/increment" method="get">
+    <button type="submit">Aumentar</button>
+  </form>
