@@ -191,10 +191,27 @@ form#register {
 }
 
 #cards .card {
-  width: 350px;
+  width: 300px;
   height: auto;
   padding: 20px;
   background-color: #4b4b4b;
+  color: #fff;
+  margin: 10px;
+}
+
+#cards .card:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: box-shadow 0.1s ease-in;
+}
+
+#cards .toolbar input {
+  background-color: transparent;
+  border: none;
+  color: #dfc8c8;
+}
+
+#cards .toolbar input:hover {
   color: #fff;
 }
 
